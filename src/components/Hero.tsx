@@ -81,8 +81,8 @@ const Hero = () => {
             className="group"
             onClick={() => {
               const link = document.createElement('a');
-              link.href = '/resume.pdf';
-              link.download = 'Sahil_Jadhav_Resume.pdf';
+              link.href = '/lovable-uploads/0e9c0ad0-856e-4a89-a216-7c0772b12c5b.png';
+              link.download = 'Sahil_Jadhav_Resume.png';
               link.click();
             }}
           >
