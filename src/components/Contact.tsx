@@ -36,19 +36,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "sahilnj143@gmail.com",
-      href: "mailto:sahilnj143@gmail.com"
+      value: "sj747251@gmail.com",
+      href: "mailto:sj747251@gmail.com"
+    },
+    {
+      icon: Phone,
+      title: "Phone",
+      value: "+91 9021077932",
+      href: "tel:+919021077932"
     },
     {
       icon: MapPin,
       title: "Location",
       value: "Nashik, Maharashtra, India",
-      href: "#"
-    },
-    {
-      icon: Phone,
-      title: "Available",
-      value: "Mon - Fri, 9AM - 6PM",
       href: "#"
     }
   ];

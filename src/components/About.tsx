@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import profilePhoto from "@/assets/profile-photo.jpg";
+const profilePhoto = "/lovable-uploads/122818b4-2fff-440d-8e4b-50ddda23cbbf.png";
 
 const About = () => {
   const fadeInUp = {
