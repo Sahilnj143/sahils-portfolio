@@ -10,7 +10,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-32 bg-gradient-to-br from-background via-muted/20 to-primary/5 relative overflow-hidden">
+    <section id="about" className="py-32 bg-white relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full blur-3xl floating-animation" />
@@ -25,10 +25,10 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-extrabold mb-8">
+          <h2 className="text-5xl md:text-7xl font-extrabold mb-8 text-gray-900">
             About <span className="text-gradient pulse-glow">Me</span>
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Passionate about creating intelligent solutions that transform possibilities into reality
           </p>
         </motion.div>
@@ -65,10 +65,10 @@ const About = () => {
             className="space-y-8 order-1 lg:order-2"
           >
             <div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 text-foreground group-hover:text-gradient">
+              <h3 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
                 Final Year BTech Student in AI & Data Science
               </h3>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
                 Based in Nashik, Maharashtra, I'm passionate about building innovative solutions 
                 that bridge the gap between artificial intelligence and real-world applications, 
                 creating technology that genuinely improves lives.
@@ -83,8 +83,8 @@ const About = () => {
               >
                 <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-accent mt-2 flex-shrink-0 group-hover:scale-150 transition-spring neon-glow" />
                 <div>
-                  <h4 className="text-lg font-bold text-primary mb-2">Current Focus</h4>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h4 className="text-lg font-bold text-gray-800 mb-2">Current Focus</h4>
+                  <p className="text-gray-600 leading-relaxed">
                     Building full-stack web applications, AI-powered solutions, and embedded systems 
                     with edge AI capabilities that push the boundaries of what's possible.
                   </p>
@@ -98,8 +98,8 @@ const About = () => {
               >
                 <div className="w-3 h-3 rounded-full bg-gradient-to-r from-accent to-secondary mt-2 flex-shrink-0 group-hover:scale-150 transition-spring neon-glow" />
                 <div>
-                  <h4 className="text-lg font-bold text-accent mb-2">Learning Journey</h4>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h4 className="text-lg font-bold text-gray-800 mb-2">Learning Journey</h4>
+                  <p className="text-gray-600 leading-relaxed">
                     Constantly exploring Next.js, Edge AI, and Predictive Maintenance Systems 
                     to stay at the cutting edge of technological innovation.
                   </p>
@@ -113,8 +113,8 @@ const About = () => {
               >
                 <div className="w-3 h-3 rounded-full bg-gradient-to-r from-secondary to-primary mt-2 flex-shrink-0 group-hover:scale-150 transition-spring neon-glow" />
                 <div>
-                  <h4 className="text-lg font-bold text-secondary mb-2">Mission</h4>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h4 className="text-lg font-bold text-gray-800 mb-2">Mission</h4>
+                  <p className="text-gray-600 leading-relaxed">
                     Driving innovation with AI to solve complex problems and create meaningful, 
                     lasting impact in the technology industry and beyond.
                   </p>
