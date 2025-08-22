@@ -77,8 +77,14 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-32 bg-gradient-to-br from-muted/20 via-background to-accent/5 relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-accent/10 to-secondary/10 rounded-full blur-3xl floating-animation" />
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full blur-3xl floating-animation" style={{ animationDelay: '3s' }} />
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -86,11 +92,11 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Featured <span className="text-gradient">Projects</span>
+          <h2 className="text-5xl md:text-7xl font-extrabold mb-8">
+            Featured <span className="text-gradient pulse-glow">Projects</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Innovative solutions spanning AI, web development, and IoT systems
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Innovative solutions spanning AI, web development, and IoT systems that push the boundaries of technology
           </p>
         </motion.div>
 
@@ -99,35 +105,35 @@ const Projects = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
         >
           {projects.map((project, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <Card className={`card-gradient shadow-card hover:shadow-elegant transition-all duration-500 border-0 h-full group cursor-pointer relative overflow-hidden ${project.featured ? 'lg:col-span-1' : ''}`}>
+              <Card className={`card-gradient shadow-card hover:shadow-intense transition-spring border-0 h-full group cursor-pointer hover-lift modern-glow relative overflow-hidden ${project.featured ? 'lg:col-span-1 ring-2 ring-primary/20' : ''}`}>
                 {project.featured && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <div className="bg-gradient-to-r from-primary to-accent px-2 py-1 rounded-full flex items-center space-x-1">
-                      <Sparkles className="w-3 h-3 text-white" />
-                      <span className="text-xs text-white font-medium">Featured</span>
+                  <div className="absolute top-6 right-6 z-20">
+                    <div className="bg-gradient-to-r from-primary to-accent px-3 py-2 rounded-xl flex items-center space-x-2 shadow-glow">
+                      <Sparkles className="w-4 h-4 text-white animate-pulse" />
+                      <span className="text-sm text-white font-bold">Featured</span>
                     </div>
                   </div>
                 )}
                 
-                <div className="p-6 h-full flex flex-col">
+                <div className="p-8 h-full flex flex-col relative z-10">
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-gradient transition-colors">
+                    <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-gradient transition-spring">
                       {project.title}
                     </h3>
                     
-                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                    <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
                       {project.description}
                     </p>
                     
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-3 mb-8">
                       {project.tech.map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium"
+                          className="px-3 py-2 bg-primary/10 border border-primary/30 text-primary rounded-xl text-sm font-semibold hover:bg-primary/20 hover:scale-110 transition-spring"
                         >
                           {tech}
                         </span>
@@ -135,25 +141,25 @@ const Projects = () => {
                     </div>
                   </div>
                   
-                  <div className="flex space-x-3">
+                  <div className="flex space-x-4">
                     <Button
                       variant="outline"
-                      size="sm"
-                      className="flex-1 group/btn"
+                      size="lg"
+                      className="flex-1 group/btn font-bold"
                       onClick={() => window.open(project.github, '_blank')}
                     >
-                      <Github className="mr-2 h-4 w-4 group-hover/btn:scale-110 transition-transform" />
-                      Code
+                      <Github className="mr-2 h-5 w-5 group-hover/btn:scale-125 group-hover/btn:rotate-12 transition-spring" />
+                      View Code
                     </Button>
                     
                     <Button
-                      variant="default"
-                      size="sm"
+                      variant="gradient"
+                      size="lg"
                       className="flex-1 group/btn"
                       onClick={() => window.open(project.demo, '_blank')}
                     >
-                      <ExternalLink className="mr-2 h-4 w-4 group-hover/btn:scale-110 transition-transform" />
-                      Demo
+                      <ExternalLink className="mr-2 h-5 w-5 group-hover/btn:scale-125 group-hover/btn:-rotate-12 transition-spring" />
+                      Live Demo
                     </Button>
                   </div>
                 </div>

@@ -54,8 +54,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-32 bg-gradient-to-br from-background via-accent/5 to-primary/10 relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-10 right-10 w-96 h-96 bg-gradient-to-r from-primary/15 to-accent/15 rounded-full blur-3xl floating-animation" />
+        <div className="absolute bottom-10 left-10 w-80 h-80 bg-gradient-to-r from-accent/15 to-secondary/15 rounded-full blur-3xl floating-animation" style={{ animationDelay: '3s' }} />
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -63,40 +69,41 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Get In <span className="text-gradient">Touch</span>
+          <h2 className="text-5xl md:text-7xl font-extrabold mb-8">
+            Get In <span className="text-gradient pulse-glow">Touch</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to collaborate on your next AI project? Let's build something amazing together!
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Ready to collaborate on your next groundbreaking AI project? Let's build something extraordinary together!
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-8"
           >
-            <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
+            <h3 className="text-3xl font-bold mb-8 text-gradient">Let's Connect</h3>
             
             {contactInfo.map((info, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
                 viewport={{ once: true }}
+                whileHover={{ scale: 1.05, x: 10 }}
               >
-                <Card className="card-gradient shadow-card hover:shadow-elegant transition-all duration-300 border-0 p-6 group cursor-pointer">
+                <Card className="card-gradient shadow-card hover:shadow-intense transition-spring border-0 p-6 group cursor-pointer hover-lift modern-glow">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <info.icon className="w-6 h-6 text-white" />
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-primary to-accent flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-spring neon-glow">
+                      <info.icon className="w-7 h-7 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">{info.title}</h4>
-                      <p className="text-muted-foreground">{info.value}</p>
+                      <h4 className="font-bold text-lg text-foreground group-hover:text-gradient transition-spring">{info.title}</h4>
+                      <p className="text-muted-foreground text-lg">{info.value}</p>
                     </div>
                   </div>
                 </Card>
@@ -111,11 +118,11 @@ const Contact = () => {
             viewport={{ once: true }}
             className="lg:col-span-2"
           >
-            <Card className="card-gradient shadow-card border-0 p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="card-gradient shadow-card hover:shadow-intense border-0 p-10 modern-glow hover-lift">
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="name" className="block text-lg font-bold text-foreground mb-3">
                       Name
                     </label>
                     <Input
@@ -124,13 +131,13 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="bg-background/50 border-border focus:border-primary transition-colors"
+                      className="h-14 text-lg bg-background/50 border-2 border-primary/30 focus:border-primary hover:border-primary/60 transition-spring rounded-xl"
                       placeholder="Your full name"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="email" className="block text-lg font-bold text-foreground mb-3">
                       Email
                     </label>
                     <Input
@@ -140,14 +147,14 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="bg-background/50 border-border focus:border-primary transition-colors"
+                      className="h-14 text-lg bg-background/50 border-2 border-primary/30 focus:border-primary hover:border-primary/60 transition-spring rounded-xl"
                       placeholder="your.email@example.com"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="message" className="block text-lg font-bold text-foreground mb-3">
                     Message
                   </label>
                   <Textarea
@@ -156,20 +163,21 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={6}
-                    className="bg-background/50 border-border focus:border-primary transition-colors resize-none"
-                    placeholder="Tell me about your project or how we can collaborate..."
+                    rows={8}
+                    className="text-lg bg-background/50 border-2 border-primary/30 focus:border-primary hover:border-primary/60 transition-spring resize-none rounded-xl"
+                    placeholder="Tell me about your project or how we can collaborate to create something amazing..."
                   />
                 </div>
                 
                 <Button 
                   type="submit" 
-                  variant="gradient" 
-                  size="lg" 
-                  className="w-full group"
+                  variant="hero" 
+                  size="xl" 
+                  className="w-full group relative overflow-hidden"
                 >
-                  <Send className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                  Send Message
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <Send className="mr-3 h-6 w-6 group-hover:scale-125 group-hover:-rotate-12 transition-spring relative z-10" />
+                  <span className="relative z-10 font-bold text-lg">Send Message</span>
                 </Button>
               </form>
             </Card>
