@@ -22,7 +22,7 @@ const Hero = () => {
     <section 
       className="min-h-screen flex items-center justify-center relative overflow-hidden particle-bg"
       style={{
-        backgroundImage: `linear-gradient(rgba(55, 48, 163, 0.9), rgba(126, 34, 206, 0.8), rgba(168, 85, 247, 0.7)), url(${heroImage})`,
+        backgroundImage: `linear-gradient(rgba(30, 20, 80, 0.85), rgba(60, 30, 120, 0.85), rgba(100, 50, 150, 0.8)), url(${heroImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
@@ -47,7 +47,7 @@ const Hero = () => {
           variants={fadeInUp}
           className="mb-6"
         >
-          <h1 className="text-6xl md:text-8xl font-extrabold text-gray-900 mb-8 leading-tight">
+          <h1 className="text-6xl md:text-8xl font-extrabold text-white mb-8 leading-tight drop-shadow-2xl">
             Hi, I'm{" "}
             <span className="text-gradient pulse-glow inline-block hover:scale-105 transition-spring cursor-default">
               Sahil Jadhav
@@ -59,10 +59,10 @@ const Hero = () => {
           variants={fadeInUp}
           className="mb-8"
         >
-          <p className="text-2xl md:text-3xl text-gray-800 font-semibold mb-4 max-w-3xl mx-auto">
+          <p className="text-2xl md:text-3xl text-white font-semibold mb-4 max-w-3xl mx-auto drop-shadow-lg">
             AI & Data Science Engineer
           </p>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-100 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
             Skilled in Machine Learning, Data Analytics, and Intelligent System Development. 
             Driving Innovation with AI to solve real-world problems.
           </p>
@@ -105,7 +105,7 @@ const Hero = () => {
           className="animate-bounce"
         >
           <ArrowDown 
-            className="mx-auto h-10 w-10 text-gray-800 cursor-pointer hover:text-gray-600 transition-colors shadow-lg"
+            className="mx-auto h-10 w-10 text-white cursor-pointer hover:text-gray-200 transition-colors shadow-lg drop-shadow-lg"
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
           />
         </motion.div>
