@@ -59,10 +59,10 @@ const Hero = () => {
           variants={fadeInUp}
           className="mb-8"
         >
-          <p className="text-xl md:text-2xl text-blue-100 mb-4 max-w-3xl mx-auto">
+          <p className="text-2xl md:text-3xl text-white font-semibold mb-4 max-w-3xl mx-auto">
             AI & Data Science Engineer
           </p>
-          <p className="text-lg text-blue-200 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-100 max-w-2xl mx-auto leading-relaxed">
             Skilled in Machine Learning, Data Analytics, and Intelligent System Development. 
             Driving Innovation with AI to solve real-world problems.
           </p>
@@ -105,7 +105,7 @@ const Hero = () => {
           className="animate-bounce"
         >
           <ArrowDown 
-            className="mx-auto h-8 w-8 text-white/70 cursor-pointer hover:text-white transition-colors"
+            className="mx-auto h-10 w-10 text-white cursor-pointer hover:text-gray-200 transition-colors shadow-lg"
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
           />
         </motion.div>
