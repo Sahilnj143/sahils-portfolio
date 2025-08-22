@@ -25,15 +25,15 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-extrabold mb-8 text-gray-900">
+          <h2 className="text-3xl sm:text-5xl md:text-7xl font-extrabold mb-6 sm:mb-8 text-gray-900">
             About <span className="text-gradient pulse-glow">Me</span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed px-4">
             Passionate about creating intelligent solutions that transform possibilities into reality
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-7xl mx-auto px-4">
           <motion.div
             variants={fadeInUp}
             initial="initial"
@@ -42,7 +42,7 @@ const About = () => {
             className="relative order-2 lg:order-1"
           >
             <Card className="card-gradient shadow-card hover:shadow-intense transition-spring p-8 border-0 hover-lift modern-glow">
-              <div className="relative mx-auto w-80 h-80 mb-8">
+              <div className="relative mx-auto w-64 sm:w-80 h-64 sm:h-80 mb-6 sm:mb-8">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/30 to-accent/30 blur-xl" />
                 <img
                   src={profilePhoto}
@@ -65,10 +65,10 @@ const About = () => {
             className="space-y-8 order-1 lg:order-2"
           >
             <div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-gray-900">
                 Final Year BTech Student in AI & Data Science
               </h3>
-              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8">
                 Based in Nashik, Maharashtra, I'm passionate about building innovative solutions 
                 that bridge the gap between artificial intelligence and real-world applications, 
                 creating technology that genuinely improves lives.

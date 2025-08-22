@@ -25,7 +25,7 @@ const Hero = () => {
         backgroundImage: `linear-gradient(rgba(30, 20, 80, 0.85), rgba(60, 30, 120, 0.85), rgba(100, 50, 150, 0.8)), url(${heroImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
+        backgroundAttachment: 'scroll'
       }}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-accent/20 to-secondary/30" />
@@ -47,7 +47,7 @@ const Hero = () => {
           variants={fadeInUp}
           className="mb-6"
         >
-          <h1 className="text-6xl md:text-8xl font-extrabold text-white mb-8 leading-tight drop-shadow-2xl">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold text-white mb-6 sm:mb-8 leading-tight drop-shadow-2xl">
             Hi, I'm{" "}
             <span className="text-gradient pulse-glow inline-block hover:scale-105 transition-spring cursor-default">
               Sahil Jadhav
@@ -59,10 +59,10 @@ const Hero = () => {
           variants={fadeInUp}
           className="mb-8"
         >
-          <p className="text-2xl md:text-3xl text-white font-semibold mb-4 max-w-3xl mx-auto drop-shadow-lg">
+          <p className="text-xl sm:text-2xl md:text-3xl text-white font-semibold mb-4 max-w-3xl mx-auto drop-shadow-lg">
             AI & Data Science Engineer
           </p>
-          <p className="text-xl text-gray-100 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+          <p className="text-lg sm:text-xl text-gray-100 max-w-2xl mx-auto leading-relaxed drop-shadow-md px-4">
             Skilled in Machine Learning, Data Analytics, and Intelligent System Development. 
             Driving Innovation with AI to solve real-world problems.
           </p>
@@ -70,7 +70,7 @@ const Hero = () => {
 
         <motion.div
           variants={fadeInUp}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12 px-4"
         >
           <Button 
             variant="hero" 
