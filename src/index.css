@@ -7,13 +7,13 @@
 @layer base {
   :root {
     --background: 0 0% 98%;
-    --foreground: 220 20% 10%;
+    --foreground: 220 30% 5%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
+    --card-foreground: 220 30% 5%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover-foreground: 220 30% 5%;
 
     --primary: 262 80% 55%;
     --primary-foreground: 0 0% 98%;
@@ -23,7 +23,7 @@
     --secondary-foreground: 0 0% 98%;
 
     --muted: 220 15% 94%;
-    --muted-foreground: 220 15% 40%;
+    --muted-foreground: 220 30% 25%;
 
     --accent: 285 90% 60%;
     --accent-foreground: 0 0% 98%;
@@ -78,30 +78,30 @@
 
   .dark {
     --background: 220 25% 8%;
-    --foreground: 220 15% 92%;
+    --foreground: 220 15% 95%;
 
     --card: 220 25% 10%;
-    --card-foreground: 220 15% 92%;
+    --card-foreground: 220 15% 95%;
 
     --popover: 220 25% 10%;
-    --popover-foreground: 220 15% 92%;
+    --popover-foreground: 220 15% 95%;
 
     --primary: 285 90% 70%;
-    --primary-foreground: 0 0% 98%;
+    --primary-foreground: 0 0% 10%;
     --primary-glow: 295 90% 80%;
 
     --secondary: 262 80% 65%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 0 0% 10%;
 
     --muted: 220 20% 15%;
-    --muted-foreground: 220 15% 70%;
+    --muted-foreground: 220 15% 85%;
 
     --accent: 270 90% 75%;
-    --accent-foreground: 0 0% 98%;
+    --accent-foreground: 0 0% 10%;
     --accent-glow: 280 90% 80%;
 
     --destructive: 0 84% 65%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 10%;
 
     --border: 220 20% 22%;
     --input: 220 20% 15%;
@@ -152,7 +152,7 @@
 
 @layer components {
   .text-gradient {
-    background: linear-gradient(90deg, hsl(285 90% 70%), hsl(270 90% 75%), hsl(320 90% 70%), hsl(185 90% 70%));
+    background: linear-gradient(90deg, hsl(262 80% 40%), hsl(270 80% 45%), hsl(285 80% 40%), hsl(320 80% 45%));
     background-size: 200% 200%;
     animation: gradient-shift 4s ease-in-out infinite;
     -webkit-background-clip: text;
